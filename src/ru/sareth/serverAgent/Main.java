@@ -14,7 +14,7 @@ public class Main {
 		String message="";
 		if (args.length == 2) {
 			message+=Space.getSpace(args[0]);
-			WriteData.writeInFile(message, args[2]);
+			WriteData.writeInFile(message, args[1]);
 		}else if(args.length == 3){
 			message+=Space.getSpace(args[0]);
 			message+=Space.getSpace(args[1]);
@@ -36,16 +36,7 @@ public class Main {
 		}
 		printUsage();
 		
-		Runtime r=Runtime.getRuntime();
-		String f,temp,res="";
-		int i=0,j=0;
-		f="sensors";
-		Process p=r.exec(f);
-		BufferedReader pin=new BufferedReader(new InputStreamReader(p.getInputStream()));
-		while((temp=pin.readLine())!=null)
-		{
-		System.out.println(temp);
-		}
+		
 		
 	}
 
